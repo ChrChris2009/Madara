@@ -1,0 +1,120 @@
+.chat-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: transparent;
+}
+
+.chat-header {
+    padding: 20px;
+    background-color: rgba(22, 17, 47, 0.4);
+    border-bottom: 1px solid rgba(127, 62, 255, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.messages-container {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.message-row {
+    display: flex;
+    width: 100%;
+}
+
+.message-row.sent {
+    justify-content: flex-end;
+}
+
+.message-row.received {
+    justify-content: flex-start;
+}
+
+.message-bubble {
+    max-width: 60%;
+    padding: 12px 16px;
+    border-radius: 18px;
+    font-size: 15px;
+    line-height: 1.4;
+    animation: slideUp 0.25s ease-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.sent .message-bubble {
+    background: linear-gradient(135deg, #7f3eff, #611bfa);
+    color: white;
+    border-bottom-right-radius: 4px;
+}
+
+.received .message-bubble {
+    background-color: #251f47;
+    color: #e2e0eb;
+    border-bottom-left-radius: 4px;
+}
+
+.chat-input-form {
+    padding: 20px;
+    display: flex;
+    gap: 12px;
+    background-color: rgba(11, 7, 30, 0.8);
+}
+
+.chat-input-form input {
+    flex: 1;
+    padding: 14px 20px;
+    background-color: #16112f;
+    border: 1px solid rgba(127, 62, 255, 0.2);
+    border-radius: 25px;
+    color: white;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.chat-input-form input:focus {
+    border-color: #7f3eff;
+    box-shadow: 0 0 10px rgba(127, 62, 255, 0.3);
+}
+
+.chat-input-form button {
+    width: 48px;
+    height: 48px;
+    background-color: #7f3eff;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.chat-input-form button:hover {
+    background-color: #9258ff;
+    transform: scale(1.05);
+}
+
+.chat-empty {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8b85a7;
+    font-size: 18px;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
