@@ -1,0 +1,28 @@
+.modal-overlay {
+    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.7); display: flex; justify-content: center; align-items: center;
+    z-index: 1100; backdrop-filter: blur(5px);
+}
+.modal-card {
+    background: #16112f; padding: 25px; border-radius: 14px; width: 90%; max-width: 350px; color: white;
+}
+.modal-card input[type="text"] {
+    width: 100%; padding: 12px; background: #0b071e; border: 1px solid rgba(127, 62, 255, 0.3);
+    border-radius: 8px; color: white; margin: 15px 0; outline: none;
+}
+.members-selection {
+    max-height: 150px; overflow-y: auto; margin-bottom: 20px; text-align: left;
+}
+.member-checkbox {
+    display: flex; align-items: center; gap: 10px; margin: 10px 0; cursor: pointer;
+}
+.modal-actions {
+    display: flex; justify-content: flex-end; gap: 10px;
+}
+.modal-actions button {
+    padding: 8px 16px; background: none; border: 1px solid #8b85a7; color: white; border-radius: 6px; cursor: pointer;
+}
+.modal-actions .submit-btn {
+    background: #7f3eff; border: none;
+}
+
